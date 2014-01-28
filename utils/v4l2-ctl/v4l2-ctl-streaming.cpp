@@ -78,6 +78,8 @@ void streaming_usage(void)
 	       "                     list all sliced VBI buffers [VIDIOC_QUERYBUF]\n"
 	       "  --list-buffers-sliced-vbi-out\n"
 	       "                     list all sliced VBI output buffers [VIDIOC_QUERYBUF]\n"
+	       "  --list-buffers-sdr\n"
+	       "                     list all SDR RX buffers [VIDIOC_QUERYBUF]\n"
 	       );
 }
 
@@ -985,5 +987,9 @@ void streaming_list(int fd)
 
 	if (options[OptListBuffersSlicedVbiOut]) {
 		list_buffers(fd, V4L2_BUF_TYPE_SLICED_VBI_OUTPUT);
+	}
+
+	if (options[OptListBuffersSdr]) {
+		list_buffers(fd, V4L2_BUF_TYPE_SDR_CAPTURE);
 	}
 }

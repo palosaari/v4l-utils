@@ -139,6 +139,7 @@ enum Option {
 	OptListBuffersSlicedVbi,
 	OptListBuffersVbiOut,
 	OptListBuffersSlicedVbiOut,
+	OptListBuffersSdr,
 	OptStreamCount,
 	OptStreamSkip,
 	OptStreamLoop,
